@@ -32,8 +32,9 @@ const TENCENT_LOOKBACK_HOURS = 48; // 腾讯研究院 AI速递, via Sohu mirror
 const MAX_TWEETS_PER_USER = 3;
 const MAX_ARTICLES_PER_BLOG = 3;
 const X_USER_LOOKUP_BATCH_SIZE = 5;
-const X_RETRY_STATUSES = new Set([500, 502, 503, 504]);
-const X_RETRY_ATTEMPTS = 3;
+const X_RETRY_STATUSES = new Set([429, 500, 502, 503, 504]); // 429 = twitterapi.io rate limit
+const X_RETRY_ATTEMPTS = 5;
+const X_THROTTLE_MS = 1200; // pause between every account to stay under new-account QPS
 
 // State file lives in the repo root so it gets committed by GitHub Actions
 const SCRIPT_DIR = decodeURIComponent(new URL(".", import.meta.url).pathname);
@@ -540,7 +541,9 @@ async function fetchXWithRetry(url, options) {
     } catch (err) {
       if (attempt === X_RETRY_ATTEMPTS) throw err;
     }
-    await sleep(1000 * attempt);
+    // Longer backoff on rate limits than on 5xx.
+    const base = lastResponse && lastResponse.status === 429 ? 3000 : 1000;
+    await sleep(base * attempt);
   }
   return lastResponse;
 }
@@ -556,16 +559,15 @@ async function fetchXContent(xAccounts, apiKey, state, errors) {
 
   for (const account of xAccounts) {
     try {
+      await sleep(X_THROTTLE_MS); // pace requests to stay under the rate limit
       const res = await fetchXWithRetry(
         `${TWITTERAPI_BASE}/twitter/user/last_tweets?userName=${encodeURIComponent(account.handle)}`,
         { headers },
       );
 
       if (!res.ok) {
-        if (res.status === 429) {
-          errors.push(`X API: Rate limited, skipping remaining accounts`);
-          break;
-        }
+        // Skip just this account (incl. persistent 429 after retries) — never
+        // abandon the whole batch.
         errors.push(
           `X API: Failed to fetch tweets for @${account.handle}: HTTP ${res.status}`,
         );
@@ -622,8 +624,6 @@ async function fetchXContent(xAccounts, apiKey, state, errors) {
         bio,
         tweets: newTweets,
       });
-
-      await sleep(200);
     } catch (err) {
       errors.push(`X API: Error fetching @${account.handle}: ${err.message}`);
     }
@@ -999,9 +999,10 @@ async function fetchTencentContent(state, errors) {
   state.seenTencent = state.seenTencent || {};
 
   try {
+    // Sohu author-articles list API (same one RSSHub uses for 搜狐号).
     const listRes = await fetchXWithRetry(
-      `https://v2.sohu.com/author-page-api/author/articles?authorId=${AUTHOR_ID}&pageSize=10&pageNumber=1`,
-      { headers: { "User-Agent": RSS_USER_AGENT } },
+      `https://v2.sohu.com/author-page-api/author-articles/pc/${AUTHOR_ID}?pNo=1`,
+      { headers: { "User-Agent": RSS_USER_AGENT, Referer: "https://www.sohu.com/" } },
     );
     if (!listRes.ok) {
       errors.push(`Tencent: article list HTTP ${listRes.status}`);
@@ -1009,18 +1010,23 @@ async function fetchTencentContent(state, errors) {
     }
     const listData = await listRes.json();
     const articles =
-      listData?.data?.articles || listData?.data || listData?.articles || [];
+      listData?.data?.pcArticleVOS || listData?.pcArticleVOS || [];
 
     for (const a of articles) {
-      const title = a.title || a.articleTitle || a.brief || "";
+      const title = a.title || a.brief || "";
       if (!/速递/.test(title)) continue; // keep the daily "AI速递" issues
-      const id = a.id || a.articleId || a.contentId;
-      const url = a.url || (id ? `https://www.sohu.com/a/${id}_${AUTHOR_ID}` : null);
+      const id = a.id || a.articleId;
+      const url =
+        a.link && /^https?:/.test(a.link)
+          ? a.link
+          : id
+            ? `https://www.sohu.com/a/${id}_${AUTHOR_ID}`
+            : null;
       if (!url) continue;
 
-      const published = new Date(
-        a.publicTime || a.publishTime || a.createTime || Date.now(),
-      );
+      let ts = a.publicTime || a.publishTime || Date.now();
+      if (typeof ts === "number" && ts < 1e12) ts *= 1000; // seconds → ms
+      const published = new Date(ts);
       if (!isNaN(published.getTime()) && published < cutoff) continue;
       if (state.seenTencent[url]) continue;
 
