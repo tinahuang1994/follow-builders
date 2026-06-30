@@ -1,0 +1,11 @@
+{
+  "generatedAt": "2026-06-30T09:36:08.051Z",
+  "lookbackHours": 48,
+  "items": [],
+  "stats": {
+    "tencentItems": 0
+  },
+  "errors": [
+    "Tencent: fetch failed"
+  ]
+}
