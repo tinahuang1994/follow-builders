@@ -26,16 +26,18 @@ import { homedir } from 'os';
 const USER_DIR = join(homedir(), '.follow-builders');
 const CONFIG_PATH = join(USER_DIR, 'config.json');
 
-const FEED_X_URL = 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-x.json';
-const FEED_PODCASTS_URL = 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-podcasts.json';
-const FEED_BLOGS_URL = 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/feed-blogs.json';
+// Points at Tina's fork — users read HER baked feed, not Zara's upstream.
+const FEED_BASE = 'https://raw.githubusercontent.com/tinahuang1994/follow-builders/main';
+const FEED_X_URL = `${FEED_BASE}/feed-x.json`;
+const FEED_PODCASTS_URL = `${FEED_BASE}/feed-podcasts.json`;
+const FEED_BLOGS_URL = `${FEED_BASE}/feed-blogs.json`;
+const FEED_TENCENT_URL = `${FEED_BASE}/feed-tencent.json`;
 
-const PROMPTS_BASE = 'https://raw.githubusercontent.com/zarazhangrui/follow-builders/main/prompts';
+const PROMPTS_BASE = `${FEED_BASE}/prompts`;
 const PROMPT_FILES = [
-  'summarize-podcast.md',
   'summarize-tweets.md',
   'summarize-blogs.md',
-  'digest-intro.md',
+  'make-deck.md',
   'translate.md'
 ];
 
@@ -72,15 +74,15 @@ async function main() {
     }
   }
 
-  // 2. Fetch all three feeds
-  const [feedX, feedPodcasts, feedBlogs] = await Promise.all([
+  // 2. Fetch the feeds (tencent is additive — absent is fine)
+  const [feedX, feedPodcasts, feedBlogs, feedTencent] = await Promise.all([
     fetchJSON(FEED_X_URL),
     fetchJSON(FEED_PODCASTS_URL),
-    fetchJSON(FEED_BLOGS_URL)
+    fetchJSON(FEED_BLOGS_URL),
+    fetchJSON(FEED_TENCENT_URL)
   ]);
 
   if (!feedX) errors.push('Could not fetch tweet feed');
-  if (!feedPodcasts) errors.push('Could not fetch podcast feed');
   if (!feedBlogs) errors.push('Could not fetch blog feed');
   if (feedX?.errors?.length) {
     errors.push(
@@ -140,25 +142,29 @@ async function main() {
     status: 'ok',
     generatedAt: new Date().toISOString(),
 
-    // User preferences
+    // User preferences (userContext + outputDir drive the personalized 小白版 deck)
     config: {
-      language: config.language || 'en',
+      language: config.language || 'zh',
       frequency: config.frequency || 'daily',
-      delivery: config.delivery || { method: 'stdout' }
+      delivery: config.delivery || { method: 'stdout' },
+      userContext: config.userContext || '',
+      outputDir: config.outputDir || ''
     },
 
-    // Content to remix
-    podcasts: feedPodcasts?.podcasts || [],
+    // Content to remix into the deck
     x: feedX?.x || [],
+    tencent: feedTencent?.items || feedTencent?.tencent || [],
     blogs: feedBlogs?.blogs || [],
+    podcasts: feedPodcasts?.podcasts || [],
 
     // Stats for the LLM to reference
     stats: {
-      podcastEpisodes: feedPodcasts?.podcasts?.length || 0,
       xBuilders: feedX?.x?.length || 0,
       totalTweets: (feedX?.x || []).reduce((sum, a) => sum + a.tweets.length, 0),
+      tencentItems: (feedTencent?.items || feedTencent?.tencent || []).length,
       blogPosts: feedBlogs?.blogs?.length || 0,
-      feedGeneratedAt: feedX?.generatedAt || feedPodcasts?.generatedAt || feedBlogs?.generatedAt || null
+      podcastEpisodes: feedPodcasts?.podcasts?.length || 0,
+      feedGeneratedAt: feedX?.generatedAt || feedBlogs?.generatedAt || null
     },
 
     // Prompts — the LLM reads these and follows the instructions

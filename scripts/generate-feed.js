@@ -10,7 +10,7 @@
 // URLs in state-feed.json so content is never repeated across runs.
 //
 // Usage: node generate-feed.js [--tweets-only | --podcasts-only | --blogs-only]
-// Env vars needed: X_BEARER_TOKEN, POD2TXT_API_KEY
+// Env vars needed: TWITTERAPI_KEY (X via twitterapi.io), POD2TXT_API_KEY (podcasts, optional)
 // ============================================================================
 
 import { readFile, writeFile } from "fs/promises";
@@ -20,7 +20,7 @@ import { join } from "path";
 // -- Constants ---------------------------------------------------------------
 
 const POD2TXT_BASE = "https://pod2txt.vercel.app/api";
-const X_API_BASE = "https://api.x.com/2";
+const TWITTERAPI_BASE = "https://api.twitterapi.io"; // X via twitterapi.io (cheap third-party, ~$0.15/1k tweets)
 // Some RSS hosts (notably Substack) block non-browser user agents from cloud IPs.
 // Using a real Chrome UA avoids 403 errors in GitHub Actions.
 const RSS_USER_AGENT =
@@ -28,6 +28,7 @@ const RSS_USER_AGENT =
 const TWEET_LOOKBACK_HOURS = 24;
 const PODCAST_LOOKBACK_HOURS = 336; // 14 days — podcasts publish weekly/biweekly, not daily
 const BLOG_LOOKBACK_HOURS = 72;
+const TENCENT_LOOKBACK_HOURS = 48; // 腾讯研究院 AI速递, via Sohu mirror
 const MAX_TWEETS_PER_USER = 3;
 const MAX_ARTICLES_PER_BLOG = 3;
 const X_USER_LOOKUP_BATCH_SIZE = 5;
@@ -521,7 +522,7 @@ async function fetchPodcastContent(podcasts, apiKey, state, errors) {
   return [];
 }
 
-// -- X/Twitter Fetching (Official API v2) ------------------------------------
+// -- X/Twitter Fetching (via twitterapi.io — cheap third-party) --------------
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -544,61 +545,20 @@ async function fetchXWithRetry(url, options) {
   return lastResponse;
 }
 
-async function fetchXContent(xAccounts, bearerToken, state, errors) {
+// twitterapi.io: GET /twitter/user/last_tweets?userName=<handle>, header X-API-Key.
+// Returns a `tweets` array (sometimes nested under `data`). Field names follow
+// twitterapi.io's response; we read defensively and fall back where possible.
+// If the first live run shows a field mismatch, adjust the mappings below.
+async function fetchXContent(xAccounts, apiKey, state, errors) {
   const results = [];
   const cutoff = new Date(Date.now() - TWEET_LOOKBACK_HOURS * 60 * 60 * 1000);
+  const headers = { "X-API-Key": apiKey };
 
-  // Batch lookup user IDs. Smaller batches make one flaky X response less likely
-  // to wipe out the whole feed.
-  const handles = xAccounts.map((a) => a.handle);
-  let userMap = {};
-
-  for (let i = 0; i < handles.length; i += X_USER_LOOKUP_BATCH_SIZE) {
-    const batch = handles.slice(i, i + X_USER_LOOKUP_BATCH_SIZE);
-    try {
-      const res = await fetchXWithRetry(
-        `${X_API_BASE}/users/by?usernames=${batch.join(",")}&user.fields=name,description`,
-        { headers: { Authorization: `Bearer ${bearerToken}` } },
-      );
-
-      if (!res.ok) {
-        errors.push(
-          `X API: User lookup failed for ${batch.join(",")}: HTTP ${res.status}`,
-        );
-        continue;
-      }
-
-      const data = await res.json();
-      for (const user of data.data || []) {
-        userMap[user.username.toLowerCase()] = {
-          id: user.id,
-          name: user.name,
-          description: user.description || "",
-        };
-      }
-      if (data.errors) {
-        for (const err of data.errors) {
-          errors.push(`X API: User not found: ${err.value || err.detail}`);
-        }
-      }
-    } catch (err) {
-      errors.push(`X API: User lookup error: ${err.message}`);
-    }
-  }
-
-  // Fetch recent tweets per user (max 3, exclude retweets/replies)
   for (const account of xAccounts) {
-    const userData = userMap[account.handle.toLowerCase()];
-    if (!userData) continue;
-
     try {
       const res = await fetchXWithRetry(
-        `${X_API_BASE}/users/${userData.id}/tweets?` +
-          `max_results=5` + // fetch 5, then filter to 3 new ones
-          `&tweet.fields=created_at,public_metrics,referenced_tweets,note_tweet` +
-          `&exclude=retweets,replies` +
-          `&start_time=${cutoff.toISOString()}`,
-        { headers: { Authorization: `Bearer ${bearerToken}` } },
+        `${TWITTERAPI_BASE}/twitter/user/last_tweets?userName=${encodeURIComponent(account.handle)}`,
+        { headers },
       );
 
       if (!res.ok) {
@@ -613,31 +573,44 @@ async function fetchXContent(xAccounts, bearerToken, state, errors) {
       }
 
       const data = await res.json();
-      const allTweets = data.data || [];
+      const allTweets = data?.data?.tweets || data?.tweets || [];
 
-      // Filter out already-seen tweets, cap at 3
+      let bio = "";
       const newTweets = [];
       for (const t of allTweets) {
-        if (state.seenTweets[t.id]) continue; // dedup
+        if (!bio) bio = t.author?.description || t.author?.bio || "";
+
+        // Mirror the original feed: skip retweets and replies.
+        const text = t.text || t.full_text || "";
+        const isRetweet = !!t.retweeted_tweet || /^RT @/.test(text);
+        const isReply =
+          !!t.isReply ||
+          !!t.inReplyToId ||
+          !!t.in_reply_to_user_id ||
+          text.startsWith("@");
+        if (isRetweet || isReply) continue;
+
+        const created = new Date(t.createdAt || t.created_at);
+        if (isNaN(created.getTime()) || created < cutoff) continue;
+
+        const id = t.id || t.id_str;
+        if (!id) continue;
+        if (state.seenTweets[id]) continue; // dedup
         if (newTweets.length >= MAX_TWEETS_PER_USER) break;
 
         newTweets.push({
-          id: t.id,
-          // note_tweet.text has the full untruncated text for long tweets (>280 chars)
-          text: t.note_tweet?.text || t.text,
-          createdAt: t.created_at,
-          url: `https://x.com/${account.handle}/status/${t.id}`,
-          likes: t.public_metrics?.like_count || 0,
-          retweets: t.public_metrics?.retweet_count || 0,
-          replies: t.public_metrics?.reply_count || 0,
-          isQuote:
-            t.referenced_tweets?.some((r) => r.type === "quoted") || false,
-          quotedTweetId:
-            t.referenced_tweets?.find((r) => r.type === "quoted")?.id || null,
+          id,
+          text,
+          createdAt: created.toISOString(),
+          url: t.url || `https://x.com/${account.handle}/status/${id}`,
+          likes: t.likeCount ?? t.favorite_count ?? 0,
+          retweets: t.retweetCount ?? t.retweet_count ?? 0,
+          replies: t.replyCount ?? t.reply_count ?? 0,
+          isQuote: !!(t.quoted_tweet || t.is_quote_status),
+          quotedTweetId: t.quoted_tweet?.id || t.quoted_status_id || null,
         });
 
-        // Mark as seen
-        state.seenTweets[t.id] = Date.now();
+        state.seenTweets[id] = Date.now();
       }
 
       if (newTweets.length === 0) continue;
@@ -646,11 +619,11 @@ async function fetchXContent(xAccounts, bearerToken, state, errors) {
         source: "x",
         name: account.name,
         handle: account.handle,
-        bio: userData.description,
+        bio,
         tweets: newTweets,
       });
 
-      await new Promise((r) => setTimeout(r, 200));
+      await sleep(200);
     } catch (err) {
       errors.push(`X API: Error fetching @${account.handle}: ${err.message}`);
     }
@@ -1000,6 +973,83 @@ async function fetchBlogContent(blogs, state, errors) {
   return results;
 }
 
+// -- 腾讯研究院 AI速递 (via Sohu mirror, author 455313) -----------------------
+// Tina's addition. Runs in GitHub Actions (full network — Sohu is reachable there
+// even though it's blocked from some sandboxes). Pulls recent "AI速递" issues from
+// the Sohu author feed and extracts their text.
+// NOTE: Sohu's API/HTML field names can shift; this is written defensively and
+// should be verified on the first live Action run (it cannot be tested offline).
+function extractSohuArticleText(html) {
+  const m = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i);
+  const body = m ? m[1] : html;
+  return body
+    .replace(/<script[\s\S]*?<\/script>/gi, "")
+    .replace(/<style[\s\S]*?<\/style>/gi, "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 6000);
+}
+
+async function fetchTencentContent(state, errors) {
+  const AUTHOR_ID = "455313";
+  const results = [];
+  const cutoff = new Date(Date.now() - TENCENT_LOOKBACK_HOURS * 60 * 60 * 1000);
+  state.seenTencent = state.seenTencent || {};
+
+  try {
+    const listRes = await fetchXWithRetry(
+      `https://v2.sohu.com/author-page-api/author/articles?authorId=${AUTHOR_ID}&pageSize=10&pageNumber=1`,
+      { headers: { "User-Agent": RSS_USER_AGENT } },
+    );
+    if (!listRes.ok) {
+      errors.push(`Tencent: article list HTTP ${listRes.status}`);
+      return results;
+    }
+    const listData = await listRes.json();
+    const articles =
+      listData?.data?.articles || listData?.data || listData?.articles || [];
+
+    for (const a of articles) {
+      const title = a.title || a.articleTitle || a.brief || "";
+      if (!/速递/.test(title)) continue; // keep the daily "AI速递" issues
+      const id = a.id || a.articleId || a.contentId;
+      const url = a.url || (id ? `https://www.sohu.com/a/${id}_${AUTHOR_ID}` : null);
+      if (!url) continue;
+
+      const published = new Date(
+        a.publicTime || a.publishTime || a.createTime || Date.now(),
+      );
+      if (!isNaN(published.getTime()) && published < cutoff) continue;
+      if (state.seenTencent[url]) continue;
+
+      let text = a.brief || a.summary || "";
+      try {
+        const artRes = await fetchXWithRetry(url, {
+          headers: { "User-Agent": RSS_USER_AGENT },
+        });
+        if (artRes.ok) text = extractSohuArticleText(await artRes.text()) || text;
+      } catch (e) {
+        /* keep brief on article-body failure */
+      }
+
+      results.push({
+        source: "tencent",
+        title,
+        url,
+        publishedAt: published.toISOString(),
+        text,
+      });
+      state.seenTencent[url] = Date.now();
+      await sleep(200);
+    }
+  } catch (err) {
+    errors.push(`Tencent: ${err.message}`);
+  }
+  return results;
+}
+
 // -- Main --------------------------------------------------------------------
 
 async function main() {
@@ -1013,17 +1063,21 @@ async function main() {
   const runTweets = tweetsOnly || (!podcastsOnly && !blogsOnly);
   const runPodcasts = podcastsOnly || (!tweetsOnly && !blogsOnly);
   const runBlogs = blogsOnly || (!tweetsOnly && !podcastsOnly);
+  const runTencent = !tweetsOnly && !podcastsOnly && !blogsOnly; // full run only
 
-  const xBearerToken = process.env.X_BEARER_TOKEN;
+  const twitterApiKey = process.env.TWITTERAPI_KEY;
   const pod2txtKey = process.env.POD2TXT_API_KEY;
 
-  if (runPodcasts && !pod2txtKey) {
-    console.error("POD2TXT_API_KEY not set");
+  if (runTweets && !twitterApiKey) {
+    console.error("TWITTERAPI_KEY not set");
     process.exit(1);
   }
-  if (runTweets && !xBearerToken) {
-    console.error("X_BEARER_TOKEN not set");
-    process.exit(1);
+  // Podcasts are optional in this fork (v1 ships without them). If the key is
+  // missing, skip podcasts gracefully instead of failing the whole run.
+  let doPodcasts = runPodcasts;
+  if (doPodcasts && !pod2txtKey) {
+    console.error("POD2TXT_API_KEY not set — skipping podcasts (optional in v1)");
+    doPodcasts = false;
   }
 
   const sources = await loadSources();
@@ -1035,7 +1089,7 @@ async function main() {
     console.error("Fetching X/Twitter content...");
     const xContent = await fetchXContent(
       sources.x_accounts,
-      xBearerToken,
+      twitterApiKey,
       state,
       errors,
     );
@@ -1062,7 +1116,7 @@ async function main() {
   }
 
   // Fetch podcasts
-  if (runPodcasts) {
+  if (doPodcasts) {
     console.error("Fetching podcast content (RSS + pod2txt)...");
     const podcasts = await fetchPodcastContent(
       sources.podcasts,
@@ -1110,6 +1164,29 @@ async function main() {
       JSON.stringify(blogFeed, null, 2),
     );
     console.error(`  feed-blogs.json: ${blogContent.length} posts`);
+  }
+
+  // Fetch 腾讯 AI速递 (Tina's addition)
+  if (runTencent) {
+    console.error("Fetching 腾讯研究院 AI速递...");
+    const tencentItems = await fetchTencentContent(state, errors);
+    console.error(`  Found ${tencentItems.length} 腾讯 item(s)`);
+
+    const tencentFeed = {
+      generatedAt: new Date().toISOString(),
+      lookbackHours: TENCENT_LOOKBACK_HOURS,
+      items: tencentItems,
+      stats: { tencentItems: tencentItems.length },
+      errors:
+        errors.filter((e) => e.startsWith("Tencent")).length > 0
+          ? errors.filter((e) => e.startsWith("Tencent"))
+          : undefined,
+    };
+    await writeFile(
+      join(SCRIPT_DIR, "..", "feed-tencent.json"),
+      JSON.stringify(tencentFeed, null, 2),
+    );
+    console.error(`  feed-tencent.json: ${tencentItems.length} items`);
   }
 
   // Save dedup state

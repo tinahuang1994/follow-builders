@@ -56,6 +56,14 @@
         }
       }
     },
+    "userContext": {
+      "type": "string",
+      "description": "What the user does / is building (asked at onboarding). Used to personalize the 'So what · for you' analysis on each item in the 小白版 deck."
+    },
+    "outputDir": {
+      "type": "string",
+      "description": "Folder to write the daily 小白版 HTML deck into. File name: AI日报-YYYY-MM-DD-小白版.html"
+    },
     "onboardingComplete": {
       "type": "boolean",
       "default": false,
