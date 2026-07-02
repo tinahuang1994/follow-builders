@@ -1,141 +1,22 @@
 {
-  "generatedAt": "2026-07-01T10:16:53.471Z",
+  "generatedAt": "2026-07-02T09:34:06.125Z",
   "lookbackHours": 24,
-  "x": [
-    {
-      "source": "x",
-      "name": "Swyx",
-      "handle": "swyx",
-      "bio": "",
-      "tweets": [
-        {
-          "id": "2072048730581405800",
-          "text": "very successful first poster sessions day at AIEWF, thanks to @heathercmiller and @ACM_President for the support!!\n\ntomorrow: Poaster sessions! submit your hottest tweets to @vibhuuuus for printing!\n\nspotted: left shark https://t.co/nv2I2l00Oe",
-          "createdAt": "2026-06-30T20:04:48.000Z",
-          "url": "https://x.com/swyx/status/2072048730581405800",
-          "likes": 41,
-          "retweets": 4,
-          "replies": 9,
-          "isQuote": true,
-          "quotedTweetId": "2068868526291718334"
-        }
-      ]
-    },
-    {
-      "source": "x",
-      "name": "Boris Cherny",
-      "handle": "bcherny",
-      "bio": "",
-      "tweets": [
-        {
-          "id": "2072105851457019944",
-          "text": "Agree",
-          "createdAt": "2026-06-30T23:51:47.000Z",
-          "url": "https://x.com/bcherny/status/2072105851457019944",
-          "likes": 851,
-          "retweets": 9,
-          "replies": 29,
-          "isQuote": true,
-          "quotedTweetId": "2072024792056909935"
-        },
-        {
-          "id": "2072000214634742243",
-          "text": "You asked, we listened. Claude Desktop on Linux is here!\n\nDownload link: https://t.co/gjgHZvbKyi",
-          "createdAt": "2026-06-30T16:52:01.000Z",
-          "url": "https://x.com/bcherny/status/2072000214634742243",
-          "likes": 3619,
-          "retweets": 211,
-          "replies": 305,
-          "isQuote": true,
-          "quotedTweetId": "2071988881717871065"
-        }
-      ]
-    },
-    {
-      "source": "x",
-      "name": "Peter Yang",
-      "handle": "petergyang",
-      "bio": "",
-      "tweets": [
-        {
-          "id": "2072165346476511583",
-          "text": "What does this mean btw? After I hit 50% weekly usage Fable is no longer available? https://t.co/nU5J9p9KsC",
-          "createdAt": "2026-07-01T03:48:12.000Z",
-          "url": "https://x.com/petergyang/status/2072165346476511583",
-          "likes": 432,
-          "retweets": 6,
-          "replies": 81,
-          "isQuote": false,
-          "quotedTweetId": null
-        },
-        {
-          "id": "2072111311396438410",
-          "text": "Setting an alarm at midnight to get Fable to fix all my projects 😅",
-          "createdAt": "2026-07-01T00:13:29.000Z",
-          "url": "https://x.com/petergyang/status/2072111311396438410",
-          "likes": 138,
-          "retweets": 0,
-          "replies": 28,
-          "isQuote": true,
-          "quotedTweetId": "2072106151890809341"
-        },
-        {
-          "id": "2072098874081296855",
-          "text": "This whole game to make a \"(model) is INSANE\" video whenever the latest model drops - I'm not sure I want to play it tbh.",
-          "createdAt": "2026-06-30T23:24:03.000Z",
-          "url": "https://x.com/petergyang/status/2072098874081296855",
-          "likes": 43,
-          "retweets": 0,
-          "replies": 15,
-          "isQuote": false,
-          "quotedTweetId": null
-        }
-      ]
-    },
-    {
-      "source": "x",
-      "name": "Nan Yu",
-      "handle": "thenanyu",
-      "bio": "",
-      "tweets": [
-        {
-          "id": "2071973229070033322",
-          "text": "The definition of “distillation” is interesting. Going by this logic, the entirety of Cursor’s training data was distilled from Claude in the early days",
-          "createdAt": "2026-06-30T15:04:47.000Z",
-          "url": "https://x.com/thenanyu/status/2071973229070033322",
-          "likes": 46,
-          "retweets": 0,
-          "replies": 3,
-          "isQuote": true,
-          "quotedTweetId": "2071925094520078723"
-        }
-      ]
-    },
-    {
-      "source": "x",
-      "name": "Madhu Guru",
-      "handle": "realmadhuguru",
-      "bio": "",
-      "tweets": [
-        {
-          "id": "2071970221477470694",
-          "text": "The biggest challenge for trad PMs trying to adapt to AI native building is a lack of magical thinking. A decade of frameworks, “agile” and metric obsession has led to constraint-first, incremental thinking.\n\nI used to combat this on my teams by asking them to  imagine we had tech from 100 yrs in the future, the experiences it would enable and working backward from that. the ideas would always be far more creative.\n\nthe funny thing is, that technology from the future is here.\n\ngo build that magical thing!",
-          "createdAt": "2026-06-30T14:52:50.000Z",
-          "url": "https://x.com/realmadhuguru/status/2071970221477470694",
-          "likes": 57,
-          "retweets": 4,
-          "replies": 5,
-          "isQuote": false,
-          "quotedTweetId": null
-        }
-      ]
-    }
-  ],
+  "x": [],
   "stats": {
-    "xBuilders": 5,
-    "totalTweets": 8
+    "xBuilders": 0,
+    "totalTweets": 0
   },
   "errors": [
+    "X API: Failed to fetch tweets for @karpathy: HTTP 402",
+    "X API: Failed to fetch tweets for @swyx: HTTP 402",
+    "X API: Failed to fetch tweets for @joshwoodward: HTTP 402",
+    "X API: Failed to fetch tweets for @bcherny: HTTP 402",
+    "X API: Failed to fetch tweets for @thsottiaux: HTTP 402",
+    "X API: Failed to fetch tweets for @petergyang: HTTP 402",
+    "X API: Failed to fetch tweets for @thenanyu: HTTP 402",
+    "X API: Failed to fetch tweets for @realmadhuguru: HTTP 402",
+    "X API: Failed to fetch tweets for @AmandaAskell: HTTP 402",
+    "X API: Failed to fetch tweets for @_catwu: HTTP 402",
     "X API: Failed to fetch tweets for @trq212: HTTP 402",
     "X API: Failed to fetch tweets for @GoogleLabs: HTTP 402",
     "X API: Failed to fetch tweets for @amasad: HTTP 402",
