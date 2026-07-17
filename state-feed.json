@@ -4,7 +4,10 @@
   "seenArticles": {
     "https://claude.com/blog/claude-for-foundation-models": 1783936155066,
     "https://claude.com/blog/artifacts-in-claude-code": 1784104629187,
-    "https://www.anthropic.com/engineering/how-we-contain-claude": 1784190953730
+    "https://www.anthropic.com/engineering/how-we-contain-claude": 1784190953730,
+    "https://www.anthropic.com/engineering/april-23-postmortem": 1784276989315,
+    "https://www.anthropic.com/engineering/managed-agents": 1784276990337,
+    "https://claude.com/blog/claude-managed-agents-updates": 1784276990990
   },
   "seenTencent": {
     "https://www.sohu.com/a/1043399963_455313": 1782813197191,
@@ -20,6 +23,7 @@
     "https://www.sohu.com/a/1049403897_455313": 1783936157573,
     "https://www.sohu.com/a/1049851171_455313": 1784017756437,
     "https://www.sohu.com/a/1050336266_455313": 1784104631995,
-    "https://www.sohu.com/a/1050798744_455313": 1784190956297
+    "https://www.sohu.com/a/1050798744_455313": 1784190956297,
+    "https://www.sohu.com/a/1051238276_455313": 1784276993588
   }
 }
