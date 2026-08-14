@@ -2,7 +2,6 @@
   "seenTweets": {},
   "seenVideos": {},
   "seenArticles": {
-    "https://claude.com/blog/claude-for-foundation-models": 1786088563669,
     "https://claude.com/blog/artifacts-in-claude-code": 1786259871406,
     "https://www.anthropic.com/engineering/how-we-contain-claude": 1786349130597,
     "https://www.anthropic.com/engineering/april-23-postmortem": 1786433931182,
@@ -42,6 +41,7 @@
     "https://www.sohu.com/a/1060779342_455313": 1786349133274,
     "https://www.sohu.com/a/1061193334_455313": 1786433936033,
     "https://www.sohu.com/a/1061632085_455313": 1786521242140,
-    "https://www.sohu.com/a/1062093222_455313": 1786607688572
+    "https://www.sohu.com/a/1062093222_455313": 1786607688572,
+    "https://www.sohu.com/a/1062532068_455313": 1786693934573
   }
 }
