@@ -2,11 +2,9 @@
   "seenTweets": {},
   "seenVideos": {},
   "seenArticles": {
-    "https://www.anthropic.com/engineering/april-23-postmortem": 1786433931182,
-    "https://www.anthropic.com/engineering/managed-agents": 1786433931747,
-    "https://claude.com/blog/claude-managed-agents-updates": 1786433932348,
     "https://claude.com/blog/claude-for-foundation-models": 1786777125109,
-    "https://claude.com/blog/artifacts-in-claude-code": 1787036739759
+    "https://claude.com/blog/artifacts-in-claude-code": 1787036739759,
+    "https://www.anthropic.com/engineering/how-we-contain-claude": 1787123195870
   },
   "seenTencent": {
     "https://www.sohu.com/a/1043399963_455313": 1782813197191,
@@ -44,6 +42,7 @@
     "https://www.sohu.com/a/1062093222_455313": 1786607688572,
     "https://www.sohu.com/a/1062532068_455313": 1786693934573,
     "https://www.sohu.com/a/1063677258_455313": 1786951055153,
-    "https://www.sohu.com/a/1064115732_455313": 1787036741484
+    "https://www.sohu.com/a/1064115732_455313": 1787036741484,
+    "https://www.sohu.com/a/1064570830_455313": 1787123198351
   }
 }
