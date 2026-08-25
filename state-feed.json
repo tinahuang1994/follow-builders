@@ -2,7 +2,6 @@
   "seenTweets": {},
   "seenVideos": {},
   "seenArticles": {
-    "https://claude.com/blog/artifacts-in-claude-code": 1787036739759,
     "https://www.anthropic.com/engineering/how-we-contain-claude": 1787123195870,
     "https://www.anthropic.com/engineering/april-23-postmortem": 1787209652907,
     "https://www.anthropic.com/engineering/managed-agents": 1787209653489,
@@ -49,6 +48,7 @@
     "https://www.sohu.com/a/1064570830_455313": 1787123198351,
     "https://www.sohu.com/a/1065075978_455313": 1787209656418,
     "https://www.sohu.com/a/1065537360_455313": 1787296134969,
-    "https://www.sohu.com/a/1066618305_455313": 1787556591703
+    "https://www.sohu.com/a/1066618305_455313": 1787556591703,
+    "https://www.sohu.com/a/1067054851_455313": 1787641786684
   }
 }
