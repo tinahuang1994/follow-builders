@@ -2,7 +2,6 @@
   "seenTweets": {},
   "seenVideos": {},
   "seenArticles": {
-    "https://claude.com/blog/artifacts-in-claude-code": 1788434241725,
     "https://www.anthropic.com/engineering/how-we-contain-claude": 1788604677399,
     "https://claude.com/blog/claude-in-chrome-generally-available": 1788604678088,
     "https://claude.com/blog/cowork-built-in-browser": 1788604678626,
@@ -61,6 +60,7 @@
     "https://www.sohu.com/a/1071600020_455313": 1788521000674,
     "https://www.sohu.com/a/1072671882_455313": 1788784592329,
     "https://www.sohu.com/a/1073029447_455313": 1788866503807,
-    "https://www.sohu.com/a/1073532700_455313": 1788953159740
+    "https://www.sohu.com/a/1073532700_455313": 1788953159740,
+    "https://www.sohu.com/a/1074000662_455313": 1789039353733
   }
 }
