@@ -1,8 +1,16 @@
 {
-  "generatedAt": "2026-09-19T11:02:24.447Z",
+  "generatedAt": "2026-09-20T11:27:12.869Z",
   "lookbackHours": 48,
-  "items": [],
+  "items": [
+    {
+      "source": "tencent",
+      "title": "腾讯研究院AI速递 20260920",
+      "url": "https://www.sohu.com/a/1078322629_455313",
+      "publishedAt": "2026-09-19T16:15:00.000Z",
+      "text": "8月的蛋白设计实验中，Claude在15个靶点里的14个成功设计出结合剂，两款模型命中率22.6%与26.7%，高于传统项目约10%—15%的典型水平，但外部验证的成本与排期成为新瓶颈；Figure推出新一代…"
+    }
+  ],
   "stats": {
-    "tencentItems": 0
+    "tencentItems": 1
   }
 }
