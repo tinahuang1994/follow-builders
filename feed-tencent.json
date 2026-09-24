@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-23T11:40:43.174Z",
+  "generatedAt": "2026-09-24T11:49:08.670Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20260923",
-      "url": "https://www.sohu.com/a/1079646096_455313",
-      "publishedAt": "2026-09-22T16:06:00.000Z",
-      "text": "模型可完成3D游戏搭建、Blender建模、机械臂控制与Lean形式化证明，并同步开源7k+RL任务环境与端到端训练框架。姚顺宇认为模型用自生成数据训练自己只是RSI初级阶段，能自主设计整套训练流程才超出RL…"
+      "title": "腾讯研究院AI速递 20260924",
+      "url": "https://www.sohu.com/a/1080143980_455313",
+      "publishedAt": "2026-09-23T16:22:00.000Z",
+      "text": "输入、输出价格降至每百万Token4美元和20美元，实际花费比Opus5少40%，网络安全类请求将路由至Opus4.8处理。WorkBuddy上线以来已迭代50多个版本，企业版在政务、教育、零售、金融等50多…"
     }
   ],
   "stats": {
