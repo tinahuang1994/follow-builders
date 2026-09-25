@@ -1,16 +1,8 @@
 {
-  "generatedAt": "2026-09-24T11:49:08.670Z",
+  "generatedAt": "2026-09-25T11:53:45.669Z",
   "lookbackHours": 48,
-  "items": [
-    {
-      "source": "tencent",
-      "title": "腾讯研究院AI速递 20260924",
-      "url": "https://www.sohu.com/a/1080143980_455313",
-      "publishedAt": "2026-09-23T16:22:00.000Z",
-      "text": "输入、输出价格降至每百万Token4美元和20美元，实际花费比Opus5少40%，网络安全类请求将路由至Opus4.8处理。WorkBuddy上线以来已迭代50多个版本，企业版在政务、教育、零售、金融等50多…"
-    }
-  ],
+  "items": [],
   "stats": {
-    "tencentItems": 1
+    "tencentItems": 0
   }
 }
