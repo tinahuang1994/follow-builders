@@ -1,8 +1,16 @@
 {
-  "generatedAt": "2026-09-27T12:06:01.559Z",
+  "generatedAt": "2026-09-28T13:59:08.539Z",
   "lookbackHours": 48,
-  "items": [],
+  "items": [
+    {
+      "source": "tencent",
+      "title": "腾讯研究院AI速递 20260928",
+      "url": "https://www.sohu.com/a/1081514205_455313",
+      "publishedAt": "2026-09-27T16:01:00.000Z",
+      "text": "支持33种语言互译，覆盖5种中国少数民族语言及方言，提供语音、拍照与离线翻译，可预下载模型在无网环境使用；OpenAICodex负责人Tibo回顾产品由内部Python智能体与ASWE项目合并而来，核心用Ru…"
+    }
+  ],
   "stats": {
-    "tencentItems": 0
+    "tencentItems": 1
   }
 }
