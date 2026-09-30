@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-29T12:56:07.618Z",
+  "generatedAt": "2026-09-30T12:38:10.125Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20260929",
-      "url": "https://www.sohu.com/a/1081963024_455313",
-      "publishedAt": "2026-09-28T16:05:00.000Z",
-      "text": "画布可直接调用Mureka生成歌曲，视频与图片节点支持智能配乐并回写为音频节点，三种能力可分用或合用，素材无需反复导出上传。马斯克接受央视财经约26分钟专访时称，Anthropic已让AI擅长软件工程，但尚无…"
+      "title": "腾讯研究院AI速递 20260930",
+      "url": "https://www.sohu.com/a/1082433255_455313",
+      "publishedAt": "2026-09-29T16:09:00.000Z",
+      "text": "Anthropic发布ClaudeSonnet5.5，标价与Sonnet5同为输入2美元、输出10美元/百万Token，因更省Token单任务成本最高降30%，速度提升超30%；上升段一台真空猛禽提前关机，任…"
     }
   ],
   "stats": {
