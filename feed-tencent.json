@@ -1,16 +1,8 @@
 {
-  "generatedAt": "2026-09-30T12:38:10.125Z",
+  "generatedAt": "2026-10-01T13:19:17.977Z",
   "lookbackHours": 48,
-  "items": [
-    {
-      "source": "tencent",
-      "title": "腾讯研究院AI速递 20260930",
-      "url": "https://www.sohu.com/a/1082433255_455313",
-      "publishedAt": "2026-09-29T16:09:00.000Z",
-      "text": "Anthropic发布ClaudeSonnet5.5，标价与Sonnet5同为输入2美元、输出10美元/百万Token，因更省Token单任务成本最高降30%，速度提升超30%；上升段一台真空猛禽提前关机，任…"
-    }
-  ],
+  "items": [],
   "stats": {
-    "tencentItems": 1
+    "tencentItems": 0
   }
 }
