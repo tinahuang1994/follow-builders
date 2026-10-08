@@ -1,8 +1,16 @@
 {
-  "generatedAt": "2026-10-07T13:27:37.503Z",
+  "generatedAt": "2026-10-08T13:33:20.185Z",
   "lookbackHours": 48,
-  "items": [],
+  "items": [
+    {
+      "source": "tencent",
+      "title": "腾讯研究院AI速递 20261008",
+      "url": "https://www.sohu.com/a/1084843403_455313",
+      "publishedAt": "2026-10-07T16:01:00.000Z",
+      "text": "出图价腰斩，1K每张0.034美元；信息图可先联网查证，事实准确分由0.179升至0.521；但输入与思考Token涨价两三倍，旧版API将于10月29日关停。在自家欧洲机房用4000张GraceBlackw…"
+    }
+  ],
   "stats": {
-    "tencentItems": 0
+    "tencentItems": 1
   }
 }

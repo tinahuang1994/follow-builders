@@ -3,7 +3,10 @@
   "seenVideos": {},
   "seenArticles": {
     "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs": 1790944718134,
-    "https://claude.com/blog/cowork-is-now-claude": 1791027726650
+    "https://claude.com/blog/cowork-is-now-claude": 1791027726650,
+    "https://www.anthropic.com/engineering/how-we-contain-claude": 1791466396251,
+    "https://www.anthropic.com/engineering/april-23-postmortem": 1791466396873,
+    "https://www.anthropic.com/engineering/managed-agents": 1791466397495
   },
   "seenTencent": {
     "https://www.sohu.com/a/1043399963_455313": 1782813197191,
@@ -72,6 +75,7 @@
     "https://www.sohu.com/a/1080143980_455313": 1790250548470,
     "https://www.sohu.com/a/1081514205_455313": 1790603948340,
     "https://www.sohu.com/a/1081963024_455313": 1790686567418,
-    "https://www.sohu.com/a/1082433255_455313": 1790771889926
+    "https://www.sohu.com/a/1082433255_455313": 1790771889926,
+    "https://www.sohu.com/a/1084843403_455313": 1791466399985
   }
 }
