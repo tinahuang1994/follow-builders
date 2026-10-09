@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-08T13:33:20.185Z",
+  "generatedAt": "2026-10-09T13:20:42.324Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261008",
-      "url": "https://www.sohu.com/a/1084843403_455313",
-      "publishedAt": "2026-10-07T16:01:00.000Z",
-      "text": "出图价腰斩，1K每张0.034美元；信息图可先联网查证，事实准确分由0.179升至0.521；但输入与思考Token涨价两三倍，旧版API将于10月29日关停。在自家欧洲机房用4000张GraceBlackw…"
+      "title": "腾讯研究院AI速递 20261009",
+      "url": "https://www.sohu.com/a/1085270738_455313",
+      "publishedAt": "2026-10-08T16:01:00.000Z",
+      "text": "搭载英伟达RTXSparkN1X，最高20核CPU、6144核GPU、128GB统一内存与1petaflop算力，本地可跑超1200亿参数模型；微软称其AI视频生成速度为M5Pro版MacBookPro的6.…"
     }
   ],
   "stats": {
