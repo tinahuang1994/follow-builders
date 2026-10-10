@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-09T13:20:42.324Z",
+  "generatedAt": "2026-10-10T12:35:21.348Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261009",
-      "url": "https://www.sohu.com/a/1085270738_455313",
-      "publishedAt": "2026-10-08T16:01:00.000Z",
-      "text": "搭载英伟达RTXSparkN1X，最高20核CPU、6144核GPU、128GB统一内存与1petaflop算力，本地可跑超1200亿参数模型；微软称其AI视频生成速度为M5Pro版MacBookPro的6.…"
+      "title": "腾讯研究院AI速递 20261010",
+      "url": "https://www.sohu.com/a/1085715291_455313",
+      "publishedAt": "2026-10-09T16:03:00.000Z",
+      "text": "设会话、语义、程序、情节四类记忆，可在谷歌自有模型与Claude等第三方模型间智能路由，官方称综合成本降至全用前沿模型的1/3、速度提升40%；Anthropic10月8日展示一张紫外线全天图，约三分之一天区…"
     }
   ],
   "stats": {
