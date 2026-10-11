@@ -1,16 +1,8 @@
 {
-  "generatedAt": "2026-10-10T12:35:21.348Z",
+  "generatedAt": "2026-10-11T12:53:30.353Z",
   "lookbackHours": 48,
-  "items": [
-    {
-      "source": "tencent",
-      "title": "腾讯研究院AI速递 20261010",
-      "url": "https://www.sohu.com/a/1085715291_455313",
-      "publishedAt": "2026-10-09T16:03:00.000Z",
-      "text": "设会话、语义、程序、情节四类记忆，可在谷歌自有模型与Claude等第三方模型间智能路由，官方称综合成本降至全用前沿模型的1/3、速度提升40%；Anthropic10月8日展示一张紫外线全天图，约三分之一天区…"
-    }
-  ],
+  "items": [],
   "stats": {
-    "tencentItems": 1
+    "tencentItems": 0
   }
 }
