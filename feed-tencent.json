@@ -1,8 +1,16 @@
 {
-  "generatedAt": "2026-10-11T12:53:30.353Z",
+  "generatedAt": "2026-10-12T15:29:45.490Z",
   "lookbackHours": 48,
-  "items": [],
+  "items": [
+    {
+      "source": "tencent",
+      "title": "腾讯研究院AI速递 20261012",
+      "url": "https://www.sohu.com/a/1086432362_455313",
+      "publishedAt": "2026-10-11T16:01:00.000Z",
+      "text": "OpenAI10月6日在GitHub公开的首批722篇数学手稿中，一篇175页，论证一般四维挂谷集合的Hausdorff维数为4；此前维数下界停在3.059，王虹与Zakharov今年9月的满维结果只覆盖“粘…"
+    }
+  ],
   "stats": {
-    "tencentItems": 0
+    "tencentItems": 1
   }
 }
