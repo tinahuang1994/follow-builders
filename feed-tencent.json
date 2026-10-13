@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-12T15:29:45.490Z",
+  "generatedAt": "2026-10-13T14:14:53.522Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261012",
-      "url": "https://www.sohu.com/a/1086432362_455313",
-      "publishedAt": "2026-10-11T16:01:00.000Z",
-      "text": "OpenAI10月6日在GitHub公开的首批722篇数学手稿中，一篇175页，论证一般四维挂谷集合的Hausdorff维数为4；此前维数下界停在3.059，王虹与Zakharov今年9月的满维结果只覆盖“粘…"
+      "title": "腾讯研究院AI速递 20261013",
+      "url": "https://www.sohu.com/a/1086887226_455313",
+      "publishedAt": "2026-10-12T16:01:00.000Z",
+      "text": "上海AI实验室基于科学智能上下文协议SCP推出实验设备访问与协同协议书生SCP-Lab并开源，供科研智能体统一发现设备能力、提交任务并获取反馈；他称过去十几年最大的错误是对AI相信不够，并预计明年ChatGP…"
     }
   ],
   "stats": {
