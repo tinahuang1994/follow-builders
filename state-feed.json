@@ -4,7 +4,8 @@
   "seenArticles": {
     "https://www.anthropic.com/engineering/how-we-contain-claude": 1791466396251,
     "https://www.anthropic.com/engineering/april-23-postmortem": 1791466396873,
-    "https://www.anthropic.com/engineering/managed-agents": 1791466397495
+    "https://www.anthropic.com/engineering/managed-agents": 1791466397495,
+    "https://www.anthropic.com/engineering/redesigning-source-control": 1791978955160
   },
   "seenTencent": {
     "https://www.sohu.com/a/1043399963_455313": 1782813197191,
@@ -78,6 +79,7 @@
     "https://www.sohu.com/a/1085270738_455313": 1791552042124,
     "https://www.sohu.com/a/1085715291_455313": 1791635721147,
     "https://www.sohu.com/a/1086432362_455313": 1791818985289,
-    "https://www.sohu.com/a/1086887226_455313": 1791900893323
+    "https://www.sohu.com/a/1086887226_455313": 1791900893323,
+    "https://www.sohu.com/a/1087353138_455313": 1791978957131
   }
 }

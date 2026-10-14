@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-13T14:14:53.522Z",
+  "generatedAt": "2026-10-14T11:55:57.331Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261013",
-      "url": "https://www.sohu.com/a/1086887226_455313",
-      "publishedAt": "2026-10-12T16:01:00.000Z",
-      "text": "上海AI实验室基于科学智能上下文协议SCP推出实验设备访问与协同协议书生SCP-Lab并开源，供科研智能体统一发现设备能力、提交任务并获取反馈；他称过去十几年最大的错误是对AI相信不够，并预计明年ChatGP…"
+      "title": "腾讯研究院AI速递 20261014",
+      "url": "https://www.sohu.com/a/1087353138_455313",
+      "publishedAt": "2026-10-13T16:01:00.000Z",
+      "text": "面壁开源MiniCPM-V4.7，35BMoE模型手机约3GB内存可跑阶跃终端10月13日发布首款大模型原生智能体手机STEPXNeo，先行版把模型、StepAOS、StepStudio与硬件整合定价3999…"
     }
   ],
   "stats": {
