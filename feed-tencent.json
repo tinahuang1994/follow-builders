@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-14T11:55:57.331Z",
+  "generatedAt": "2026-10-15T11:32:36.479Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261014",
-      "url": "https://www.sohu.com/a/1087353138_455313",
-      "publishedAt": "2026-10-13T16:01:00.000Z",
-      "text": "面壁开源MiniCPM-V4.7，35BMoE模型手机约3GB内存可跑阶跃终端10月13日发布首款大模型原生智能体手机STEPXNeo，先行版把模型、StepAOS、StepStudio与硬件整合定价3999…"
+      "title": "腾讯研究院AI速递 20261015",
+      "url": "https://www.sohu.com/a/1087818144_455313",
+      "publishedAt": "2026-10-14T16:01:00.000Z",
+      "text": "AI陪伴平台Character.AI向美国法院申请破产保护，负债5000万至1亿美元，据路透社月亏800万至900万美元；他以AlphaZero为例，弃用人类数据后几小时即超越AlphaGo两年成果，团队仅2…"
     }
   ],
   "stats": {
