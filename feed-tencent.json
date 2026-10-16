@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-15T11:32:36.479Z",
+  "generatedAt": "2026-10-16T11:27:28.132Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261015",
-      "url": "https://www.sohu.com/a/1087818144_455313",
-      "publishedAt": "2026-10-14T16:01:00.000Z",
-      "text": "AI陪伴平台Character.AI向美国法院申请破产保护，负债5000万至1亿美元，据路透社月亏800万至900万美元；他以AlphaZero为例，弃用人类数据后几小时即超越AlphaGo两年成果，团队仅2…"
+      "title": "腾讯研究院AI速递 20261016",
+      "url": "https://www.sohu.com/a/1088289922_455313",
+      "publishedAt": "2026-10-15T16:01:00.000Z",
+      "text": "采用92层窄深架构，SparseGQA以8token块级索引将索引与top-k选择开销降至1/8，并将上下文压缩纳入强化学习；CodingAgent写代码搭轻量游戏，引擎维护状态与规则并输出结构画面，基于Wa…"
     }
   ],
   "stats": {
