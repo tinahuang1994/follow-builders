@@ -1,16 +1,8 @@
 {
-  "generatedAt": "2026-10-16T11:27:28.132Z",
+  "generatedAt": "2026-10-17T10:47:37.015Z",
   "lookbackHours": 48,
-  "items": [
-    {
-      "source": "tencent",
-      "title": "腾讯研究院AI速递 20261016",
-      "url": "https://www.sohu.com/a/1088289922_455313",
-      "publishedAt": "2026-10-15T16:01:00.000Z",
-      "text": "采用92层窄深架构，SparseGQA以8token块级索引将索引与top-k选择开销降至1/8，并将上下文压缩纳入强化学习；CodingAgent写代码搭轻量游戏，引擎维护状态与规则并输出结构画面，基于Wa…"
-    }
-  ],
+  "items": [],
   "stats": {
-    "tencentItems": 1
+    "tencentItems": 0
   }
 }
