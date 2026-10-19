@@ -1,8 +1,16 @@
 {
-  "generatedAt": "2026-10-18T11:09:35.966Z",
+  "generatedAt": "2026-10-19T13:20:46.057Z",
   "lookbackHours": 48,
-  "items": [],
+  "items": [
+    {
+      "source": "tencent",
+      "title": "腾讯研究院AI速递 20261019",
+      "url": "https://www.sohu.com/a/1089419880_455313",
+      "publishedAt": "2026-10-18T16:01:00.000Z",
+      "text": "Hy-Memory-30A3B模型约3B激活参数，跨四套记忆系统得分55.49，高于Opus5的54.62；MemHub可连接WorkBuddy、Cursor、Codex等10种AI工具同步记忆；Anthro…"
+    }
+  ],
   "stats": {
-    "tencentItems": 0
+    "tencentItems": 1
   }
 }
