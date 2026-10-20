@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-19T13:20:46.057Z",
+  "generatedAt": "2026-10-20T11:40:46.422Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261019",
-      "url": "https://www.sohu.com/a/1089419880_455313",
-      "publishedAt": "2026-10-18T16:01:00.000Z",
-      "text": "Hy-Memory-30A3B模型约3B激活参数，跨四套记忆系统得分55.49，高于Opus5的54.62；MemHub可连接WorkBuddy、Cursor、Codex等10种AI工具同步记忆；Anthro…"
+      "title": "腾讯研究院AI速递 20261020",
+      "url": "https://www.sohu.com/a/1089878331_455313",
+      "publishedAt": "2026-10-19T16:01:00.000Z",
+      "text": "新推出的个人设计AgentArti可建立个人记忆库，支持导入作品集或从历史项目提炼审美偏好，并在后台从Google、Pinterest、Behance等平台调研生成趋势报告与情绪板；资产可直接添加到画布，也可…"
     }
   ],
   "stats": {
