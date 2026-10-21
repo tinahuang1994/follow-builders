@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-20T11:40:46.422Z",
+  "generatedAt": "2026-10-21T11:52:20.513Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261020",
-      "url": "https://www.sohu.com/a/1089878331_455313",
-      "publishedAt": "2026-10-19T16:01:00.000Z",
-      "text": "新推出的个人设计AgentArti可建立个人记忆库，支持导入作品集或从历史项目提炼审美偏好，并在后台从Google、Pinterest、Behance等平台调研生成趋势报告与情绪板；资产可直接添加到画布，也可…"
+      "title": "腾讯研究院AI速递 20261021",
+      "url": "https://www.sohu.com/a/1090360348_455313",
+      "publishedAt": "2026-10-20T16:01:00.000Z",
+      "text": "DeepSeek将内部推理框架DeepInfer全面开源，已支撑DeepSeekV4.1Flash高吞吐、低延迟的大规模推理服务；Ming-3.0-asr-tiny支持传入热词与对话上文，四类评测平均错误率4…"
     }
   ],
   "stats": {
