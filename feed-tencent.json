@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-21T11:52:20.513Z",
+  "generatedAt": "2026-10-22T11:56:00.335Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261021",
-      "url": "https://www.sohu.com/a/1090360348_455313",
-      "publishedAt": "2026-10-20T16:01:00.000Z",
-      "text": "DeepSeek将内部推理框架DeepInfer全面开源，已支撑DeepSeekV4.1Flash高吞吐、低延迟的大规模推理服务；Ming-3.0-asr-tiny支持传入热词与对话上文，四类评测平均错误率4…"
+      "title": "腾讯研究院AI速递 20261022",
+      "url": "https://www.sohu.com/a/1090863002_455313",
+      "publishedAt": "2026-10-21T16:01:00.000Z",
+      "text": "算力从到场到投产由4至5个月压缩至约1个月，新闻稿称部署最短14天；VeraRubin已全面量产，100%液冷，组装一个节点不到5分钟；Claude调用12种蛋白设计工具，对超55万组蛋白与毒素组合做结构预测…"
     }
   ],
   "stats": {

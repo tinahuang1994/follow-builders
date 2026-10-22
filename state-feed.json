@@ -2,7 +2,6 @@
   "seenTweets": {},
   "seenVideos": {},
   "seenArticles": {
-    "https://www.anthropic.com/engineering/redesigning-source-control": 1791978955160,
     "https://www.anthropic.com/engineering/how-we-contain-claude": 1792234054122,
     "https://www.anthropic.com/engineering/april-23-postmortem": 1792234054807
   },
@@ -84,6 +83,7 @@
     "https://www.sohu.com/a/1088289922_455313": 1792150047932,
     "https://www.sohu.com/a/1089419880_455313": 1792416045858,
     "https://www.sohu.com/a/1089878331_455313": 1792496446221,
-    "https://www.sohu.com/a/1090360348_455313": 1792583540315
+    "https://www.sohu.com/a/1090360348_455313": 1792583540315,
+    "https://www.sohu.com/a/1090863002_455313": 1792670160135
   }
 }
