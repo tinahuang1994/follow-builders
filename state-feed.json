@@ -1,10 +1,7 @@
 {
   "seenTweets": {},
   "seenVideos": {},
-  "seenArticles": {
-    "https://www.anthropic.com/engineering/how-we-contain-claude": 1792234054122,
-    "https://www.anthropic.com/engineering/april-23-postmortem": 1792234054807
-  },
+  "seenArticles": {},
   "seenTencent": {
     "https://www.sohu.com/a/1043399963_455313": 1782813197191,
     "https://www.sohu.com/a/1042933178_455313": 1782813197796,
