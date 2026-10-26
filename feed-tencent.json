@@ -1,8 +1,16 @@
 {
-  "generatedAt": "2026-10-25T11:33:49.966Z",
+  "generatedAt": "2026-10-26T13:07:20.168Z",
   "lookbackHours": 48,
-  "items": [],
+  "items": [
+    {
+      "source": "tencent",
+      "title": "腾讯研究院AI速递 20261026",
+      "url": "https://www.sohu.com/a/1092593629_455313",
+      "publishedAt": "2026-10-25T16:30:00.000Z",
+      "text": "由生数科技Vidu提供首席技术支持、博纳AIGMS团队制作的《三星堆：未来往事》10月23日上映，片长100分钟，是国内首部获公映许可证的AI超写实院线电影；Dia是唯一提供Arc专用迁移入口的浏览器，可带走…"
+    }
+  ],
   "stats": {
-    "tencentItems": 0
+    "tencentItems": 1
   }
 }
