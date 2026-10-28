@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-27T12:15:21.239Z",
+  "generatedAt": "2026-10-28T12:58:59.855Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261027",
-      "url": "https://www.sohu.com/a/1093056339_455313",
-      "publishedAt": "2026-10-26T16:01:00.000Z",
-      "text": "Reddit最大开源社区r/opensource版主10月24日发布新规，全面封禁使用AI、由AI生成或服务AI的项目；Manus联合创始人张涛发文《用Manus改造Manus》，称工程师常同时处理十几、二十…"
+      "title": "腾讯研究院AI速递 20261028",
+      "url": "https://www.sohu.com/a/1093562137_455313",
+      "publishedAt": "2026-10-27T16:16:00.000Z",
+      "text": "即梦上线“短剧工作室”，Seedance2.5最低约0.19元一秒即梦上线“短剧工作室”，串联剧本、资产、分镜、视频生成与后期，并推出首个专业剧本模型Dream，可做剧本自检；npm联合创始人LaurieVo…"
     }
   ],
   "stats": {
