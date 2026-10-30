@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-29T13:05:25.181Z",
+  "generatedAt": "2026-10-30T12:58:39.402Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261029",
-      "url": "https://www.sohu.com/a/1094169632_455313",
-      "publishedAt": "2026-10-29T00:08:00.000Z",
-      "text": "WorkBuddy企业专享版开放智能体办公套件苹果发布首款触屏MacBookPro，22999元起售苹果提出iPrefBench，在可执行iOS环境评测移动端Agent“推断与询问”，含26个应用、130个未…"
+      "title": "腾讯研究院AI速递 20261030",
+      "url": "https://www.sohu.com/a/1094612416_455313",
+      "publishedAt": "2026-10-29T16:01:00.000Z",
+      "text": "谷歌发布Gemini4Carbon，以59分登顶AA智能指数5.0，首发输入2美元/百万Token，为Opus5.5一半；腾讯发布面向个人的跨应用AI协同体系BuddyOne，打通腾讯文档、会议、网盘与ima…"
     }
   ],
   "stats": {
