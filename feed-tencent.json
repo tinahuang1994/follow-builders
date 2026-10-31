@@ -1,16 +1,8 @@
 {
-  "generatedAt": "2026-10-30T12:58:39.402Z",
+  "generatedAt": "2026-10-31T12:35:27.029Z",
   "lookbackHours": 48,
-  "items": [
-    {
-      "source": "tencent",
-      "title": "腾讯研究院AI速递 20261030",
-      "url": "https://www.sohu.com/a/1094612416_455313",
-      "publishedAt": "2026-10-29T16:01:00.000Z",
-      "text": "谷歌发布Gemini4Carbon，以59分登顶AA智能指数5.0，首发输入2美元/百万Token，为Opus5.5一半；腾讯发布面向个人的跨应用AI协同体系BuddyOne，打通腾讯文档、会议、网盘与ima…"
-    }
-  ],
+  "items": [],
   "stats": {
-    "tencentItems": 1
+    "tencentItems": 0
   }
 }
