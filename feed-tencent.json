@@ -1,8 +1,16 @@
 {
-  "generatedAt": "2026-11-01T13:28:03.228Z",
+  "generatedAt": "2026-11-02T15:58:08.444Z",
   "lookbackHours": 48,
-  "items": [],
+  "items": [
+    {
+      "source": "tencent",
+      "title": "腾讯研究院AI速递 20261102",
+      "url": "https://www.sohu.com/a/1095818523_455313",
+      "publishedAt": "2026-11-01T16:03:00.000Z",
+      "text": "谷歌ProjectSuncatcher原型卫星10月1日入轨，运行Gemma4，系数据中心级TPU首次在轨生成并回传完整AI响应；卫星载四颗TPU，供电最高约1kW，每次仅启动一颗、运行约20分钟；后续测热应…"
+    }
+  ],
   "stats": {
-    "tencentItems": 0
+    "tencentItems": 1
   }
 }
