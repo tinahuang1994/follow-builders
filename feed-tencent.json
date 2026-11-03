@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-02T15:58:08.444Z",
+  "generatedAt": "2026-11-03T14:19:02.076Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261102",
-      "url": "https://www.sohu.com/a/1095818523_455313",
-      "publishedAt": "2026-11-01T16:03:00.000Z",
-      "text": "谷歌ProjectSuncatcher原型卫星10月1日入轨，运行Gemma4，系数据中心级TPU首次在轨生成并回传完整AI响应；卫星载四颗TPU，供电最高约1kW，每次仅启动一颗、运行约20分钟；后续测热应…"
+      "title": "腾讯研究院AI速递 20261103",
+      "url": "https://www.sohu.com/a/1096286983_455313",
+      "publishedAt": "2026-11-02T16:01:00.000Z",
+      "text": "HyQEC构造的量子码编码效率较原榜首提升约48%；香山处理器每GHz得分提升5.79%，fuzz测试发现10个未报告bug。无编程经验的策划可在1到2天内用Godot做出可试玩原型，Kimi会实际运行并结合…"
     }
   ],
   "stats": {
