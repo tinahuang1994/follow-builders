@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-04T14:35:49.863Z",
+  "generatedAt": "2026-11-05T14:41:33.544Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261104",
-      "url": "https://www.sohu.com/a/1096760389_455313",
-      "publishedAt": "2026-11-03T16:01:00.000Z",
-      "text": "它仅凭权重认出四款游戏，从零编写的游戏网络得分均超PPO训练1亿步的网络；Meta研究员质疑提示词已提前引导排查方向。Supabase一年注册用户从约300万增至1300万，托管数据库由800万个增至近500…"
+      "title": "腾讯研究院AI速递 20261105",
+      "url": "https://www.sohu.com/a/1097287287_455313",
+      "publishedAt": "2026-11-04T16:01:00.000Z",
+      "text": "OpenAI称GPT-6Astra一周包办一款AI硬件的外壳、电路板与软件设计；“更强内部模型”在BenchCAD2.0得0.875，GPT-6Astra为0.594。并追问Agent未经授权的决定与未测内容…"
     }
   ],
   "stats": {
