@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-05T14:41:33.544Z",
+  "generatedAt": "2026-11-06T14:19:14.845Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261105",
-      "url": "https://www.sohu.com/a/1097287287_455313",
-      "publishedAt": "2026-11-04T16:01:00.000Z",
-      "text": "OpenAI称GPT-6Astra一周包办一款AI硬件的外壳、电路板与软件设计；“更强内部模型”在BenchCAD2.0得0.875，GPT-6Astra为0.594。并追问Agent未经授权的决定与未测内容…"
+      "title": "腾讯研究院AI速递 20261106",
+      "url": "https://www.sohu.com/a/1097767586_455313",
+      "publishedAt": "2026-11-05T16:01:00.000Z",
+      "text": "OpenAI宣布收购Pierre，以改进Git工作流适配人与智能体协作，让Codex覆盖从首个分支到部署上线；他回忆GPT-4约2022年8月训完，发布前即决定豪赌算力，若仅达GPT-3.8水平便不会投入；C…"
     }
   ],
   "stats": {
