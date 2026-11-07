@@ -1,16 +1,8 @@
 {
-  "generatedAt": "2026-11-06T14:19:14.845Z",
+  "generatedAt": "2026-11-07T13:05:21.606Z",
   "lookbackHours": 48,
-  "items": [
-    {
-      "source": "tencent",
-      "title": "腾讯研究院AI速递 20261106",
-      "url": "https://www.sohu.com/a/1097767586_455313",
-      "publishedAt": "2026-11-05T16:01:00.000Z",
-      "text": "OpenAI宣布收购Pierre，以改进Git工作流适配人与智能体协作，让Codex覆盖从首个分支到部署上线；他回忆GPT-4约2022年8月训完，发布前即决定豪赌算力，若仅达GPT-3.8水平便不会投入；C…"
-    }
-  ],
+  "items": [],
   "stats": {
-    "tencentItems": 1
+    "tencentItems": 0
   }
 }
