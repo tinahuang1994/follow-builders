@@ -1,8 +1,16 @@
 {
-  "generatedAt": "2026-11-10T14:55:38.792Z",
+  "generatedAt": "2026-11-11T14:26:16.593Z",
   "lookbackHours": 48,
-  "items": [],
+  "items": [
+    {
+      "source": "tencent",
+      "title": "腾讯研究院AI速递 20261111",
+      "url": "https://www.sohu.com/a/1099814736_455313",
+      "publishedAt": "2026-11-10T16:01:00.000Z",
+      "text": "1000个Fable5.2智能体30小时完成费马大定理形式化，此前需11天；Opus5.5跑18小时仅完成26%。26项真机测试中，四种动作模型平均成功率较无触觉提升约14至26个百分点；T-Rex拧瓶盖由5…"
+    }
+  ],
   "stats": {
-    "tencentItems": 0
+    "tencentItems": 1
   }
 }
