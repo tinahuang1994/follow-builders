@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-11T14:26:16.593Z",
+  "generatedAt": "2026-11-12T15:17:40.038Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261111",
-      "url": "https://www.sohu.com/a/1099814736_455313",
-      "publishedAt": "2026-11-10T16:01:00.000Z",
-      "text": "1000个Fable5.2智能体30小时完成费马大定理形式化，此前需11天；Opus5.5跑18小时仅完成26%。26项真机测试中，四种动作模型平均成功率较无触觉提升约14至26个百分点；T-Rex拧瓶盖由5…"
+      "title": "腾讯研究院AI速递 20261112",
+      "url": "https://www.sohu.com/a/1100309147_455313",
+      "publishedAt": "2026-11-11T16:01:00.000Z",
+      "text": "Epic发布虚幻5.9预览版，工程师指挥Agent集群一周完成，将UE6的AI工具链移植至UE5，称首个主要由Agent构建的版本；阿里上线Qwen4-Max预览版，同步开源Agent运行底座QwenCode…"
     }
   ],
   "stats": {
