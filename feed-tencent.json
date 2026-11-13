@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-12T15:17:40.038Z",
+  "generatedAt": "2026-11-13T14:37:47.347Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261112",
-      "url": "https://www.sohu.com/a/1100309147_455313",
-      "publishedAt": "2026-11-11T16:01:00.000Z",
-      "text": "Epic发布虚幻5.9预览版，工程师指挥Agent集群一周完成，将UE6的AI工具链移植至UE5，称首个主要由Agent构建的版本；阿里上线Qwen4-Max预览版，同步开源Agent运行底座QwenCode…"
+      "title": "腾讯研究院AI速递 20261113",
+      "url": "https://www.sohu.com/a/1100778759_455313",
+      "publishedAt": "2026-11-12T16:01:00.000Z",
+      "text": "Seedance2.5flash上线，生成提速一倍且720P价格降约34%RoboLab-120上1200次测试成功率46.2%，居世界动作模型与开源机器人模型榜首；Franka真机100次成功88次，FLU…"
     }
   ],
   "stats": {
