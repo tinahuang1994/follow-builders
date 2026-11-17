@@ -1,8 +1,16 @@
 {
-  "generatedAt": "2026-11-16T15:50:37.384Z",
+  "generatedAt": "2026-11-17T16:02:27.931Z",
   "lookbackHours": 48,
-  "items": [],
+  "items": [
+    {
+      "source": "tencent",
+      "title": "腾讯研究院AI速递 20261117",
+      "url": "https://www.sohu.com/a/1102407186_455313",
+      "publishedAt": "2026-11-16T16:01:00.000Z",
+      "text": "华为云推出昇腾原生具身世界模型CloudRobo-WM1.2，在RoboTwin2.0、LiberoPro2.0评测均列第一，将于11月30日开放权重与代码；OpenAI首席经济学家罗尼·查特吉称，已用AI的…"
+    }
+  ],
   "stats": {
-    "tencentItems": 0
+    "tencentItems": 1
   }
 }
