@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-17T16:02:27.931Z",
+  "generatedAt": "2026-11-18T15:42:38.197Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261117",
-      "url": "https://www.sohu.com/a/1102407186_455313",
-      "publishedAt": "2026-11-16T16:01:00.000Z",
-      "text": "华为云推出昇腾原生具身世界模型CloudRobo-WM1.2，在RoboTwin2.0、LiberoPro2.0评测均列第一，将于11月30日开放权重与代码；OpenAI首席经济学家罗尼·查特吉称，已用AI的…"
+      "title": "腾讯研究院AI速递 20261118",
+      "url": "https://www.sohu.com/a/1102892372_455313",
+      "publishedAt": "2026-11-17T16:01:00.000Z",
+      "text": "ClaudeCode团队约90%代码由Claude编写和审查，靠证据闭环一人可指挥几十上百个Claude；独立判分工具检查结构化文件生成，成功率提升10点；她引Ramp数据称，前1%企业每员工月均前沿模型支出…"
     }
   ],
   "stats": {
