@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-18T15:42:38.197Z",
+  "generatedAt": "2026-11-19T15:47:03.492Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261118",
-      "url": "https://www.sohu.com/a/1102892372_455313",
-      "publishedAt": "2026-11-17T16:01:00.000Z",
-      "text": "ClaudeCode团队约90%代码由Claude编写和审查，靠证据闭环一人可指挥几十上百个Claude；独立判分工具检查结构化文件生成，成功率提升10点；她引Ramp数据称，前1%企业每员工月均前沿模型支出…"
+      "title": "腾讯研究院AI速递 20261119",
+      "url": "https://www.sohu.com/a/1103373697_455313",
+      "publishedAt": "2026-11-18T16:05:00.000Z",
+      "text": "微软Ignite2026发布5款新模型及2款模型进展，称MAICode2编程综合成绩达GPT-6.1Sol约98%，成本约其40%；他判断机器人ChatGPT时刻可能在1至3年内到来，但工业机器人准确率需达9…"
     }
   ],
   "stats": {
