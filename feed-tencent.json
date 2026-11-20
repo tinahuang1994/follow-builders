@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-19T15:47:03.492Z",
+  "generatedAt": "2026-11-20T15:29:32.887Z",
   "lookbackHours": 48,
   "items": [
     {
       "source": "tencent",
-      "title": "腾讯研究院AI速递 20261119",
-      "url": "https://www.sohu.com/a/1103373697_455313",
-      "publishedAt": "2026-11-18T16:05:00.000Z",
-      "text": "微软Ignite2026发布5款新模型及2款模型进展，称MAICode2编程综合成绩达GPT-6.1Sol约98%，成本约其40%；他判断机器人ChatGPT时刻可能在1至3年内到来，但工业机器人准确率需达9…"
+      "title": "腾讯研究院AI速递 20261120",
+      "url": "https://www.sohu.com/a/1103818588_455313",
+      "publishedAt": "2026-11-19T16:01:00.000Z",
+      "text": "OpenAI称其模型修改SystemVerilogRTL代码，参与AMD一款高端GPU设计，经专业工具评估找到最高14%优化空间，不到5个月完成约一年设计进展；他认为AI会让许多旧产品迎来重新设计机会，如文档…"
     }
   ],
   "stats": {
