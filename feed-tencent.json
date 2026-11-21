@@ -1,16 +1,8 @@
 {
-  "generatedAt": "2026-11-20T15:29:32.887Z",
+  "generatedAt": "2026-11-21T14:41:34.082Z",
   "lookbackHours": 48,
-  "items": [
-    {
-      "source": "tencent",
-      "title": "腾讯研究院AI速递 20261120",
-      "url": "https://www.sohu.com/a/1103818588_455313",
-      "publishedAt": "2026-11-19T16:01:00.000Z",
-      "text": "OpenAI称其模型修改SystemVerilogRTL代码，参与AMD一款高端GPU设计，经专业工具评估找到最高14%优化空间，不到5个月完成约一年设计进展；他认为AI会让许多旧产品迎来重新设计机会，如文档…"
-    }
-  ],
+  "items": [],
   "stats": {
-    "tencentItems": 1
+    "tencentItems": 0
   }
 }
