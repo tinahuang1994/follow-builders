@@ -1,23 +1,8 @@
 {
-  "generatedAt": "2026-11-23T18:13:15.790Z",
+  "generatedAt": "2026-11-24T17:48:15.768Z",
   "lookbackHours": 48,
-  "items": [
-    {
-      "source": "tencent",
-      "title": "腾讯研究院AI速递 20261124",
-      "url": "https://www.sohu.com/a/1105436999_455313",
-      "publishedAt": "2026-11-23T17:29:00.000Z",
-      "text": "即日起向GLMCodingPlan全量用户开放，V2/V3/团队版额度提至1.5倍；API完成安全评估后开放，权重计划开源。作为轻量模型，其复杂医学推理与长程Agent稳定性仍不及领先闭源旗舰；影像报告能力仅…"
-    },
-    {
-      "source": "tencent",
-      "title": "腾讯研究院AI速递 20261123",
-      "url": "https://www.sohu.com/a/1104947600_455313",
-      "publishedAt": "2026-11-22T16:01:00.000Z",
-      "text": "将质疑转为脚本重跑数据后，156项重大质疑中77项推翻核心结论；仅读文本的评审难以区分隐藏缺陷与已披露局限；其称园区已有1000多台机器人，预计最晚六个月内让机器人进入家庭，家庭月租需控制在300至500美元…"
-    }
-  ],
+  "items": [],
   "stats": {
-    "tencentItems": 2
+    "tencentItems": 0
   }
 }
