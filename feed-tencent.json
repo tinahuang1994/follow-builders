@@ -1,8 +1,16 @@
 {
-  "generatedAt": "2026-11-24T17:48:15.768Z",
+  "generatedAt": "2026-11-25T17:15:43.112Z",
   "lookbackHours": 48,
-  "items": [],
+  "items": [
+    {
+      "source": "tencent",
+      "title": "腾讯研究院AI速递 20261126",
+      "url": "https://www.sohu.com/a/1106391351_455313",
+      "publishedAt": "2026-11-25T16:08:00.000Z",
+      "text": "1.2万亿token语料中视听联合数据占45.4%，35B-A3B在17项通用视听基准中16项结果较高，33项公开音视频评测中深度思考较直接回答平均相对提升约7%。Anthropic另一路线让Claude按协…"
+    }
+  ],
   "stats": {
-    "tencentItems": 0
+    "tencentItems": 1
   }
 }
