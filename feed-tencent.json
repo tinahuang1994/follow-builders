@@ -1,16 +1,8 @@
 {
-  "generatedAt": "2026-11-26T16:56:59.138Z",
+  "generatedAt": "2026-11-27T16:42:12.787Z",
   "lookbackHours": 48,
-  "items": [
-    {
-      "source": "tencent",
-      "title": "腾讯研究院AI速递 20261127",
-      "url": "https://www.sohu.com/a/1106873949_455313",
-      "publishedAt": "2026-11-26T16:01:00.000Z",
-      "text": "11月25日，腾讯生命科学实验室以第一单位登上《Nature》主刊，挑战高活性双靶点治疗性多肽的从头设计，不依赖已有分子模板从零设计能打开两把锁的“钥匙”；OpenAI于11月24日发布111页论文，由其内部…"
-    }
-  ],
+  "items": [],
   "stats": {
-    "tencentItems": 1
+    "tencentItems": 0
   }
 }
